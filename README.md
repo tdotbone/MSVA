@@ -1,1 +1,3 @@
-New sandbox repo for thartzler.
+
+Initial readme file text.
+First added content.
