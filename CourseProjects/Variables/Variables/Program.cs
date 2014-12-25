@@ -23,10 +23,22 @@ namespace Variables
             //myFirstName = "Bob";
             //string myFirstName = "Bob";
 
-            var myFirstName = "Bob";
+            // var myFirstName = "Bob";
 
-            Console.WriteLine(myFirstName);
+            //Console.WriteLine(myFirstName);
 
+        // mixing types int and string
+           
+            int x = 7;
+            //string y = "Bob";
+            string y = "5";
+            string myFirstTry = x.ToString() + y;
+
+            //int mySecondTry = x + y;
+            int mySecondTry = x + int.Parse(y);
+            
+            Console.WriteLine(myFirstTry);
+            //Console.WriteLine(mySecondTry);
 
             Console.ReadLine();
         }
