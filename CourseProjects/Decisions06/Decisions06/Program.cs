@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// the following is from lesson 7 even though I typed lesson 6 in the previous commits
+
 namespace Decisions06
 {
     class Program
