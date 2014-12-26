@@ -16,9 +16,10 @@ namespace Decisions06
             //Console.WriteLine("You typed: " + userValue);
             //Console.ReadLine();
 
-    // making decisions using if, else if
-    // repeating code - next session refactors this code 
-    // for reusability
+          // making decisions using if, else if
+          // repeating code - next session refactors this code 
+          // for reusability
+          /* 
             Console.WriteLine("Would you prefer what is behind door number 1 or door number 1, 2, or 3?");
             string userValue = Console.ReadLine();
             if (userValue == "1")
@@ -40,7 +41,46 @@ namespace Decisions06
             {
                 Console.WriteLine("Sorry we didn't understand You lose!");
                 Console.ReadLine();
+            }  */
+
+            // code from above refactored by adding variable "message"
+            /*
+            Console.WriteLine("Would you prefer what is behind door number 1 or door number 1, 2, or 3?");
+            string userValue = Console.ReadLine();
+
+            string message = "";
+
+            if (userValue == "1")
+            {
+                message = "You won a new car!";
             }
+            else if (userValue == "2")
+            {
+                message = "You won a new boat!";
+            }
+            else if (userValue == "3")
+            {
+                message = "You won a new cat!";
+            }
+            else
+            {
+                message = ("Sorry we didn't understand. You lose!");
+            } 
+  
+
+            Console.WriteLine(message);
+            Console.ReadLine();
+        */
+
+            // all the above using a much more condensed version
+            // using string replacement syntax and an optional version of Console.WriteLine
+           
+            Console.WriteLine("Would you prefer what is behind door number 1 or door number 1, 2, or 3?");
+            string userValue = Console.ReadLine();
+            
+            string message = (userValue == "1") ? "boat" : "strand of lint";
+            Console.WriteLine("You won a {0}", message);
+            Console.ReadLine();
         }
     }
 }
