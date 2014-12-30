@@ -21,7 +21,7 @@ namespace ReadTextFileWhile
             StreamReader myReader = new StreamReader("Values.txt");
             string line = "";
 
-            while (line != null)  // null is not the same as an empty string, it means unknown or indeterminent
+            while (line != null)  // null is not the same as an empty string, it means unknown or indeterminate
             {
                 line = myReader.ReadLine();
                 if (line != null)
