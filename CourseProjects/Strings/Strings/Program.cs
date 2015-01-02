@@ -55,6 +55,7 @@ namespace Strings
             }
            */
 
+    /*
             string myString = " That summer we took threes across the board  ";
             
               //myString = myString.Substring(5, 14); //start at this position (5) and take the next (14) characters - expecting " summer we took"
@@ -64,11 +65,13 @@ namespace Strings
               //myString = myString.Replace(" ", "--");  //replaces all spaces with --, "That--summer--we" ... etc.
 
             myString = String.Format("Length before: {0} -- After: {1}", //give the length of the string before and after trimming beginning and ending spaces
-                myString.Length, myString.Trim().Length);
+            myString.Length, myString.Trim().Length);
                     //expected output: Length before: 46 -- After: 43
             
             Console.WriteLine(myString);
             Console.ReadLine();
+     */
+     
         }
     }
 }
