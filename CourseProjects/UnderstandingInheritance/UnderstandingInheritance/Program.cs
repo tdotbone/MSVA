@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-// Example of original individual classes 'Car' and 'Truck' being reworked into a new abstract class 'Vehicle'.
+// Example of original individual classes 'Car' and 'Truck' being reworked into a new abstract base class 'Vehicle'.
 
 
 namespace UnderstandingInheritance
@@ -98,6 +98,7 @@ namespace UnderstandingInheritance
     // class Truck : Car  // the ':' means inherit everything from the 'Car' class and add the following property
     // modifying class Truck to derive from new abstract class Vehicle
 
+  /*
     class Truck : Vehicle
     {
         public int TowingCapacity { get; set; }
@@ -111,5 +112,26 @@ namespace UnderstandingInheritance
                 this.TowingCapacity);
         }
        
+    }  */
+
+    // example of a Sealed class - can't create another instance of some other kind of truck that would inherit from 'Truck'
+    sealed class Truck : Vehicle
+    {
+        public int TowingCapacity { get; set; }
+
+        //creating an override method so FormatMe() works with trucks 
+        public override string FormatMe()
+        {
+            return String.Format("{0} - {1} - {2} Towing units",
+                this.Make,
+                this.Model,
+                this.TowingCapacity);
+        }
+    }
+
+    class Semi : Truck
+    {
+        // when trying to build it creates an error
+        // ".... cannot derive from sealed type 'UnderstandingInheritance.Truck'
     }
 }
