@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+// Lesson 19 Understanding Scope and Utilizing Accessibility Modifiers
+// Commenting out the entire Scope portion examples 
+
 namespace UnderstandingScope
 {
-    class Program
+    /*class Program
     {
-        /* static void Main(string[] args)
+        static void Main(string[] args)
         {
             // 1st example
             for (int i = 0; i < 10; i++)
@@ -29,7 +33,7 @@ namespace UnderstandingScope
             Console.WriteLine("Outside of the for: " + j);
             Console.ReadLine();
         } 
-        */
+        
 
 
         // 3rd example
@@ -41,14 +45,14 @@ namespace UnderstandingScope
 
         static void Main(string[] args)
         {
-            /*
+            
              for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(i);
             }
             //Console.WriteLine(i);  'i' is defined in the above code block, can not be used outside of it
             Console.ReadLine();
-            */
+            
 
             string j = "";      //since 'j' is defined outside of the following code block it is available inside and outside of the code block
 
@@ -78,6 +82,43 @@ namespace UnderstandingScope
         static void helperMethod()
         {
             Console.WriteLine("k from the helperMethod: " + k);
+        }
+    }
+     */
+
+
+    // ===========================================================================================================
+    //  Utilizing Accessibility Modifiers
+    // ===========================================================================================================
+
+    // naming convention
+    // Uppercase first letter denotes public method 'DoSomething()'
+    // Lowercase first letter denotes private method 'helperMethod()'
+    // same thing for variables
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Car car = new Car();
+           // car.DoSomething  - the car.menu shows the public 'DoSomething()' method but not the private 'helperMethod()'
+           // can't access private methods outside of their class
+           // illustrates the notion of encapsulation, hiding the implementation, exposing the interface
+            car.DoSomething();
+            Console.ReadLine();
+        }
+
+        class Car
+        {
+            public void DoSomething()
+            {
+                Console.WriteLine(helperMethod());  //breaking his own rules of not including this in the class, should be in the presentation layer
+            }
+
+            private string helperMethod() 
+            {
+                return "Hello World!";
+            }
         }
     }
 }
