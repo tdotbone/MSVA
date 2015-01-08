@@ -7,8 +7,8 @@
     <ProjectGuid>{4535ED98-6AF7-47D7-A541-4AB5B85AB7F2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ReadTextFileWhile</RootNamespace>
-    <AssemblyName>ReadTextFileWhile</AssemblyName>
+    <RootNamespace>ReadTextFileWhileLesson</RootNamespace>
+    <AssemblyName>ReadTextFileWhileLesson</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,7 +48,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Values.txt">
+    <Content Include="Values1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
